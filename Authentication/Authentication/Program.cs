@@ -8,6 +8,8 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("https://localhost:7153");
+
 // Add services to the container.
 
 builder.Services.AddControllers();

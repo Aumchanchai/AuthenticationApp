@@ -1,0 +1,14 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "InMemory"
+  },
+  "Jwt": {
+    "Key": "3goV992sEdFfgG00tKdUNtZzhkaKPJAG1z0Mfv6QQoNoL6PatozvpC7Okrz3kpWFJ+hg8W4MRkCAGGuKceGtCQ==",
+    "Issuer": "MyApp",
+    "Audience": "MyAppClients",
+    "ExpireMinutes": 2,
+    "Iterations": 100000,
+    "SaltSize": 16,
+    "KeySize": 64
+  }
+}

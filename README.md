@@ -114,16 +114,4 @@ Authentication-FE/       # Angular 13 Frontend Application
   * Frontend is a standalone Angular SPA consuming API endpoints
 
 ---
-
-## License
-
-MIT License
-
-```
-
----
-
-ถ้าคุณอยาก ผมสามารถทำ **เวอร์ชัน README แบบสั้น ๆ สำหรับ GitHub ที่อ่านง่ายในหน้า repo** พร้อม **badge, scripts, และ quick start commands** ให้ด้วย — เหมาะสำหรับคนใหม่เข้ามาดู repo  
-
-คุณอยากให้ผมทำเวอร์ชันนั้นไหม?
 ```

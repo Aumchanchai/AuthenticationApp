@@ -1,0 +1,37 @@
+<div class="form-container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">User</label>
+      <input id="username" type="text" formControlName="username">
+    </div>
+    <p class="error" *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.dirty || registerForm.get('username')?.touched)">
+      กรุณากรอก User
+    </p>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password">
+    </div>
+    <p class="error" *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)">
+      <span *ngIf="registerForm.get('password')?.errors?.['required']">กรุณากรอก Password.</span>
+      <span *ngIf="registerForm.get('password')?.errors?.['minlength']">Password ต้องมีความยาวอย่างน้อย 6 ตัวอักษร.</span>
+    </p>
+    
+    <div>
+      <label for="confirmPassword">Confirm Password</label>
+      <input id="confirmPassword" type="password" formControlName="confirmPassword">
+    </div>
+    <p class="error" *ngIf="registerForm.get('confirmPassword')?.invalid && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)">
+      กรุณายืนยัน Password
+    </p>
+
+    <p class="error" *ngIf="registerForm.errors?.['mismatch'] && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)">
+        Password และ Confirm Password ไม่ตรงกัน
+    </p>
+
+    <button type="submit" [disabled]="registerForm.invalid">สมัครสมาชิก</button>
+  </form>
+
+  <p class="error error-api" *ngIf="errorMessage">{{ errorMessage }}</p>
+  <p>มีบัญชีอยู่แล้ว? <a routerLink="/login">ลงชื่อเข้าใช้งาน</a></p>
+</div>

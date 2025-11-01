@@ -1,0 +1,18 @@
+<div class="form-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">User</label>
+      <input id="username" type="text" formControlName="username">
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password">
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">ลงชื่อเข้าใช้งาน</button>
+  </form>
+
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  <a routerLink="/register">สมัครสมาชิก</a> 
+</div>

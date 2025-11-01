@@ -1,6 +1,3 @@
-
-
-```markdown
 # Authentication Project
 
 This repository contains a **Layered Monolith / Modular Monolith** application built with **.NET 7.0**, **Angular 13**, and **Microsoft SQL Server 2022**. It implements a complete authentication system with backend APIs, a test project, and a frontend SPA (Single Page Application).
@@ -10,36 +7,40 @@ This repository contains a **Layered Monolith / Modular Monolith** application b
 ## Project Structure
 
 ```
-
 Authentication/          # .NET API Project
 Authentication.Tests/    # Unit & Integration Tests for Authentication
 DAL/                     # Class Library for EF Core and Domain Logic
 Authentication-FE/       # Angular 13 Frontend Application
-
-````
+```
 
 ### Details
 
 1. **Authentication (API Project)**
-   - Backend implemented in **.NET 7.0**
-   - Exposes endpoints for authentication, user management, etc.
-   - References `DAL` class library for database access and domain logic
+
+   * Backend implemented in **.NET 7.0**
+   * Exposes endpoints for authentication, user management, etc.
+   * References `DAL` class library for database access and domain logic
 
 2. **Authentication.Tests**
-   - Test project for backend
-   - Uses xUnit/NUnit (depending on your setup) for unit and integration tests
+
+   * Test project for backend
+   * Uses xUnit/NUnit (depending on setup) for unit and integration tests
 
 3. **DAL**
-   - Class library containing **Entity Framework Core** DbContext and domain logic
-   - Encapsulates database operations for modularity
+
+   * Class library containing **Entity Framework Core** DbContext and domain logic
+   * Encapsulates database operations for modularity
 
 4. **Authentication-FE (Angular 13)**
-   - SPA frontend for authentication system
-   - Uses:
-     - `@angular/core`, `@angular/router`, `@angular/forms`
-     - `rxjs`, `zone.js`
-     - `jwt-decode` for JWT handling
-   - Scripts available in `package.json`:
+
+   * SPA frontend for authentication system
+   * Uses:
+
+     * `@angular/core`, `@angular/router`, `@angular/forms`
+     * `rxjs`, `zone.js`
+     * `jwt-decode` for JWT handling
+   * Scripts available in `package.json`:
+
      ```json
      "start": "ng serve",
      "build": "ng build",
@@ -51,12 +52,12 @@ Authentication-FE/       # Angular 13 Frontend Application
 
 ## Technologies
 
-- **Backend:** .NET 7.0, C#
-- **Frontend:** Angular 13, TypeScript
-- **Database:** Microsoft SQL Server 2022 (RTM) - 16.0.1000.6 (X64)
-- **ORM:** Entity Framework Core
-- **Authentication:** JWT-based
-- **Testing:** xUnit/NUnit (backend)
+* **Backend:** .NET 7.0, C#
+* **Frontend:** Angular 13, TypeScript
+* **Database:** Microsoft SQL Server 2022 (RTM) - 16.0.1000.6 (X64)
+* **ORM:** Entity Framework Core
+* **Authentication:** JWT-based
+* **Testing:** xUnit/NUnit (backend)
 
 ---
 
@@ -66,10 +67,10 @@ Authentication-FE/       # Angular 13 Frontend Application
 
 1. Open solution in Visual Studio 2022 / VS Code
 2. Restore NuGet packages:
+
    ```bash
    dotnet restore
-````
-
+   ```
 3. Update connection string in `appsettings.json` for SQL Server
 4. Apply EF Core migrations:
 
@@ -112,4 +113,3 @@ Authentication-FE/       # Angular 13 Frontend Application
   * Frontend is a standalone Angular SPA consuming API endpoints
 
 ---
-```
